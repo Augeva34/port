@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .counter {
+            font-size: 24px;
+        }
+        button {
+            font-size: 18px;
+            padding: 5px 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador</h1>
+    <div class="counter" id="counter">0</div>
+    <button onclick="Crescente()">Crescente</button>
+    <button onclick="Decrescente()">Decrescente</button>
+
+    <script>
+        let count = 0;
+
+        function updateCounter() {
+            document.getElementById("counter").innerText = count;
+        }
+
+        function    Crescente() {
+            count++;
+            updateCounter();
+        }
+
+        function Decrescente() {
+            count--;
+            updateCounter();
+        }
+    </script>
+</body>
+</html>
